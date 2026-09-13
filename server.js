@@ -354,11 +354,45 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', salon: 'Big Brother Hair & Beauty Salon, Paharganj, New Delhi', uptime: process.uptime() });
 });
 
-// Start Server
-app.listen(PORT, () => {
-  console.log(`====================================================`);
-  console.log(`  BIG BROTHER HAIR & BEAUTY SALON SERVER STARTED    `);
-  console.log(`  Location: Paharganj, New Delhi                   `);
-  console.log(`  Local URL: http://localhost:${PORT}              `);
-  console.log(`====================================================`);
+// HTML Page Routes for direct navigation & Vercel
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
+
+app.get('/about', (req, res) => {
+  res.sendFile(path.join(__dirname, 'about.html'));
+});
+
+app.get('/services', (req, res) => {
+  res.sendFile(path.join(__dirname, 'services.html'));
+});
+
+app.get('/gallery', (req, res) => {
+  res.sendFile(path.join(__dirname, 'gallery.html'));
+});
+
+app.get('/booking', (req, res) => {
+  res.sendFile(path.join(__dirname, 'booking.html'));
+});
+
+app.get('/contact', (req, res) => {
+  res.sendFile(path.join(__dirname, 'contact.html'));
+});
+
+app.get('/admin', (req, res) => {
+  res.sendFile(path.join(__dirname, 'admin.html'));
+});
+
+// Start Server if run directly
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`====================================================`);
+    console.log(`  BIG BROTHER HAIR & BEAUTY SALON SERVER STARTED    `);
+    console.log(`  Location: Paharganj, New Delhi                   `);
+    console.log(`  Local URL: http://localhost:${PORT}              `);
+    console.log(`====================================================`);
+  });
+}
+
+module.exports = app;
+
