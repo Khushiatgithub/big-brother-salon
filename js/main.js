@@ -370,12 +370,21 @@ function initNewsletterForm() {
  */
 function initQuickBooking() {
   const quickForm = document.getElementById('quickBookingForm');
+  const dateInput = document.getElementById('quickDate');
+
+  if (dateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.min = today;
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    dateInput.value = tomorrow.toISOString().split('T')[0];
+  }
+
   if (!quickForm) return;
 
   quickForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const serviceSelect = document.getElementById('quickService');
-    const dateInput = document.getElementById('quickDate');
     const stylistSelect = document.getElementById('quickStylist');
 
     const params = new URLSearchParams();
