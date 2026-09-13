@@ -1,6 +1,8 @@
 # Big Brother Hair & Beauty Salon — Luxury Web Platform & Booking Engine
 
 A luxury, production-grade web application and appointment booking engine built for **Big Brother Hair & Beauty Salon**, located in **Paharganj, New Delhi**.
+https://big-brother-salon.vercel.app/admin
+https://big-brother-salon-kappa.vercel.app/
 
 ---
 
