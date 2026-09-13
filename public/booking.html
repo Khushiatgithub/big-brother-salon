@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment | Big Brother Hair & Beauty Salon Paharganj</title>
+  <meta name="description" content="Reserve your luxury hair styling, balayage, keratin smoothing, or bridal appointment at Big Brother Hair & Beauty Salon in Paharganj, New Delhi. Instant confirmation.">
+  
+  <meta property="og:title" content="Book Appointment | Big Brother Salon">
+  <meta property="og:description" content="Instant appointment booking with certified master stylists in Paharganj, New Delhi.">
+  <meta property="og:image" content="images/hero_salon.jpg">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">B</div>
+        <div class="logo-text">
+          <span class="logo-title">BIG BROTHER</span>
+          <span class="logo-subtitle">Hair & Beauty Studio</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav CTAs -->
+      <div class="nav-actions">
+        <a href="tel:+919876543210" class="nav-phone-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span>+91 98765 43210</span>
+        </a>
+        <a href="booking.html" class="btn btn-gold btn-sm">Book Appointment</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div>
+      <div class="mobile-drawer-header">
+        <div class="brand-logo">
+          <div class="logo-icon">B</div>
+          <div class="logo-text">
+            <span class="logo-title">BIG BROTHER</span>
+            <span class="logo-subtitle">Paharganj, New Delhi</span>
+          </div>
+        </div>
+        <button class="close-drawer-btn" id="closeDrawerBtn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Salon</a></li>
+        <li><a href="services.html">Services & Pricing</a></li>
+        <li><a href="gallery.html">Transformation Gallery</a></li>
+        <li><a href="booking.html" class="active">Book Appointment</a></li>
+        <li><a href="contact.html">Contact & Location</a></li>
+        <li><a href="admin.html" style="font-size:0.95rem; color:var(--gold-light);">👑 Admin Portal</a></li>
+      </ul>
+    </div>
+    <div>
+      <a href="booking.html" class="btn btn-gold btn-block" style="margin-bottom:1rem;">Book Appointment</a>
+      <a href="tel:+919876543210" class="btn btn-glass btn-block">📞 Call Studio</a>
+    </div>
+  </aside>
+
+  <!-- Booking Section -->
+  <section class="booking-section">
+    <div class="container">
+      <div class="section-header" style="margin-bottom:2.5rem;">
+        <span class="subtitle">VIP Reservation</span>
+        <h1 class="title">Schedule Your Salon Experience</h1>
+        <p class="description">Select your signature ritual, preferred date, and time slot. Our concierge will prepare your private station.</p>
+        <div class="divider-gold"></div>
+      </div>
+
+      <div class="booking-layout">
+        <!-- Left: Form -->
+        <div class="booking-form-box">
+          <form id="bookingForm">
+
+            <!-- Step 1: Service Selection -->
+            <div class="form-step-title">
+              <span class="step-num">1</span>
+              <span>Select Service & Stylist</span>
+            </div>
+
+            <div class="form-group">
+              <label for="bookingService">Select Treatment / Service *</label>
+              <select class="form-control" id="bookingService" required>
+                <optgroup label="Hair Care & Styling">
+                  <option value="hair-cut-style">Couture Haircut & Scalp Rejuvenation — ₹999</option>
+                  <option value="hair-fade-beard">Signature Fade Haircut + Beard Spa — ₹1,299</option>
+                </optgroup>
+                <optgroup label="Hair Coloring">
+                  <option value="hair-balayage" selected>French Balayage & Glossing Treatment — ₹4,999</option>
+                  <option value="hair-global-color">Global Hair Color + Keratin Infusion — ₹3,499</option>
+                </optgroup>
+                <optgroup label="Keratin & Texture Treatments">
+                  <option value="keratin-smoothing">Brazilian Keratin Smoothening Therapy — ₹4,999</option>
+                  <option value="hair-botox">Deep Botox Hair Reconstruct & Olaplex — ₹3,999</option>
+                </optgroup>
+                <optgroup label="Clinical Skincare & Facials">
+                  <option value="hydra-facial">7-Step Clinical Luxury HydraFacial MD — ₹2,999</option>
+                  <option value="gold-bridal-facial">24K Imperial Gold Radiance Facial — ₹3,499</option>
+                </optgroup>
+                <optgroup label="Waxing & Body Rituals">
+                  <option value="painless-waxing">Full Body Rica Brazilian Waxing Spa — ₹2,499</option>
+                </optgroup>
+                <optgroup label="Bridal & Red Carpet Makeovers">
+                  <option value="royal-bridal-makeup">Royal Mughal Bridal Makeover & Hair — ₹14,999</option>
+                  <option value="party-glam-makeup">Red Carpet Party Glam & Waves — ₹4,999</option>
+                </optgroup>
+                <optgroup label="Nail Studio">
+                  <option value="nail-extensions">Gel Nail Extensions & Chrome Ombré Art — ₹1,999</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="bookingStylist">Stylist Preference</label>
+              <select class="form-control" id="bookingStylist">
+                <option value="any">Any Available Senior Master Stylist</option>
+                <option value="vikram">Vikram Singh (Senior Hair Artist & Colorist)</option>
+                <option value="meera">Meera Verma (Bridal Makeup & Glam Director)</option>
+                <option value="rohit">Rohit Mehta (Master Barber & Fade Specialist)</option>
+              </select>
+            </div>
+
+            <!-- Step 2: Date & Time -->
+            <div class="form-step-title" style="margin-top:2.5rem;">
+              <span class="step-num">2</span>
+              <span>Preferred Date & Time Slot</span>
+            </div>
+
+            <div class="form-group">
+              <label for="bookingDate">Appointment Date *</label>
+              <input type="date" class="form-control" id="bookingDate" required>
+            </div>
+
+            <div class="form-group">
+              <label>Select Time Slot (Paharganj Studio) *</label>
+              <div class="slots-grid" id="timeSlotsContainer">
+                <!-- Populated dynamically by booking.js -->
+              </div>
+            </div>
+
+            <!-- Step 3: Contact Details -->
+            <div class="form-step-title" style="margin-top:2.5rem;">
+              <span class="step-num">3</span>
+              <span>Your Contact Details</span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="clientName">Full Name *</label>
+                <input type="text" class="form-control" id="clientName" placeholder="e.g. Priyanka Sharma" required>
+              </div>
+              <div class="form-group">
+                <label for="clientPhone">Phone Number (WhatsApp) *</label>
+                <input type="tel" class="form-control" id="clientPhone" placeholder="+91 98765 43210" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="clientEmail">Email Address (Optional for e-receipt)</label>
+              <input type="email" class="form-control" id="clientEmail" placeholder="your.name@email.com">
+            </div>
+
+            <div class="form-group">
+              <label for="clientNotes">Special Requests or Hair/Skin Notes</label>
+              <textarea class="form-control" id="clientNotes" rows="3" placeholder="e.g. Sensitive scalp, bridal outfit color tone, wedding date info..."></textarea>
+            </div>
+
+            <div style="margin-top:2rem;">
+              <button type="submit" class="btn btn-gold btn-lg btn-block" id="submitBookingBtn">
+                Confirm My Luxury Booking
+              </button>
+              <p style="text-align:center; font-size:0.8rem; color:var(--text-muted); margin-top:0.75rem;">
+                🔒 No upfront advance required. Pay at the salon after your service.
+              </p>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right: Summary Card -->
+        <aside class="booking-summary-card">
+          <h3 class="summary-title">Booking Summary</h3>
+
+          <div class="summary-item">
+            <span class="label">Location</span>
+            <span class="val">Paharganj, New Delhi</span>
+          </div>
+          <div class="summary-item">
+            <span class="label">Selected Service</span>
+            <span class="val" id="summaryServiceName">French Balayage & Glossing</span>
+          </div>
+          <div class="summary-item">
+            <span class="label">Estimated Duration</span>
+            <span class="val" id="summaryDuration">150 mins</span>
+          </div>
+          <div class="summary-item">
+            <span class="label">Stylist</span>
+            <span class="val" id="summaryStylist">Any Senior Master Stylist</span>
+          </div>
+          <div class="summary-item">
+            <span class="label">Date</span>
+            <span class="val" id="summaryDate">Tomorrow</span>
+          </div>
+          <div class="summary-item">
+            <span class="label">Time Slot</span>
+            <span class="val" id="summarySlot">11:30 AM</span>
+          </div>
+
+          <div class="summary-total">
+            <span class="total-label">Estimated Total</span>
+            <span class="total-amount" id="summaryPrice">₹4,999</span>
+          </div>
+
+          <div style="margin-top:1.5rem; background:rgba(200,164,77,0.08); border:1px solid var(--border-glass); padding:1rem; border-radius:var(--radius-md); font-size:0.85rem; color:var(--text-secondary);">
+            <strong style="color:var(--gold-light); display:block; margin-bottom:0.25rem;">✨ Big Brother Salon Guarantee:</strong>
+            100% authentic L'Oréal & Olaplex products, complimentary scalp diagnostic check, and sterile single-use linen.
+          </div>
+
+          <div style="margin-top:1.5rem; text-align:center;">
+            <span style="font-size:0.82rem; color:var(--text-muted);">Need instant phone assistance?</span>
+            <a href="tel:+919876543210" style="display:block; color:var(--gold-light); font-weight:600; margin-top:0.25rem;">
+              📞 Call +91 98765 43210
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Luxury Confirmation Modal -->
+  <div class="modal-overlay" id="confirmationModal">
+    <div class="modal-box">
+      <div class="modal-icon-success">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+
+      <span class="badge badge-gold" style="margin-bottom:0.75rem;">Appointment Confirmed</span>
+      <h2 style="font-size:1.6rem; margin-bottom:0.5rem;">We Can't Wait to Welcome You!</h2>
+      <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:1.5rem;">
+        Your reservation at Big Brother Hair & Beauty Salon has been scheduled.
+      </p>
+
+      <div style="background:#1C1C1C; border:1px solid var(--border-glass); border-radius:var(--radius-md); padding:1.25rem; text-align:left; margin-bottom:1.5rem; font-size:0.9rem;">
+        <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+          <span style="color:var(--text-muted);">Booking Reference:</span>
+          <strong style="color:var(--gold-light);" id="modalBookingId">BB-2026-XXXX</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+          <span style="color:var(--text-muted);">Guest Name:</span>
+          <strong id="modalClientName">Priyanka Sharma</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+          <span style="color:var(--text-muted);">Treatment:</span>
+          <strong id="modalServiceName">French Balayage</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+          <span style="color:var(--text-muted);">Date & Time:</span>
+          <strong id="modalDateTime">Tomorrow at 11:30 AM</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+          <span style="color:var(--text-muted);">Stylist:</span>
+          <strong id="modalStylist">Vikram Singh</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between; border-top:1px dashed rgba(255,255,255,0.1); padding-top:0.5rem; margin-top:0.5rem;">
+          <span style="color:var(--text-muted);">Amount (Pay at Salon):</span>
+          <strong style="color:var(--gold-light);" id="modalPrice">₹4,999</strong>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:0.75rem;">
+        <a id="modalWhatsAppBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-block" style="background:#25D366; color:#FFF; box-shadow:none;">
+          <span>💬 Send Confirmation to WhatsApp</span>
+        </a>
+        <button id="modalCalendarBtn" class="btn btn-outline-gold btn-block">
+          📅 Download Calendar Event (.ics)
+        </button>
+        <button id="closeModalBtn" class="btn btn-glass btn-block">
+          Done & Return to Homepage
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Widget -->
+  <aside class="whatsapp-widget" aria-label="WhatsApp Concierge">
+    <div class="wa-tooltip">💬 Booking Help via WhatsApp</div>
+    <a href="https://wa.me/919876543210?text=Hi%20Big%20Brother%20Salon!%20I%20need%20help%20with%20my%20appointment%20booking." target="_blank" rel="noopener noreferrer" class="wa-btn" aria-label="Open WhatsApp Chat">
+      <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.82 14.18c-.24.68-1.4 1.25-1.92 1.32-.49.07-1.12.1-3.26-.79-2.74-1.14-4.5-3.92-4.63-4.1-.14-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 1-2.25.24-.25.53-.31.7-.31.18 0 .35 0 .5.01.16.01.38-.06.59.45.22.53.76 1.86.83 2 .07.14.11.31.02.49-.09.18-.14.29-.28.45-.14.16-.3.35-.43.47-.14.14-.29.29-.12.58.16.29.73 1.21 1.57 1.96 1.08.96 1.99 1.26 2.27 1.4.29.14.45.12.62-.07.16-.18.7-82.89-1.1.18-.28.37-.24.62-.14.25.1.58.74 1.85 1.37 1.95.22.09.43.14.63.14.31 0 .61-.08.79-.34.23-.33.24-.8.15-1.04z"/></svg>
+    </a>
+  </aside>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="logo-icon">B</div>
+            <div class="logo-text">
+              <span class="logo-title">BIG BROTHER</span>
+              <span class="logo-subtitle">Paharganj, New Delhi</span>
+            </div>
+          </div>
+          <p>
+            Paharganj's benchmark for elite hair styling, bespoke coloring, advanced HydraFacials, and opulent bridal makeovers.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Our Story</a></li>
+            <li><a href="services.html">Services & Pricing</a></li>
+            <li><a href="gallery.html">Transformation Gallery</a></li>
+            <li><a href="booking.html">Book Appointment</a></li>
+            <li><a href="contact.html">Studio Directions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Signature Rituals</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">French Balayage</a></li>
+            <li><a href="services.html">Keratin Smoothening</a></li>
+            <li><a href="services.html">Clinical HydraFacial</a></li>
+            <li><a href="services.html">Royal Mughal Bridal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Paharganj Studio</h4>
+          <p style="font-size:0.88rem; color:var(--text-muted);">
+            Main Bazaar Road, Near NDLS, Paharganj, New Delhi - 110055<br>
+            📞 +91 98765 43210<br>
+            ⏰ Open Daily: 10:00 AM - 9:00 PM
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Big Brother Hair & Beauty Salon. All Rights Reserved.</div>
+        <div><a href="admin.html" style="color:var(--gold-light);">👑 Admin Portal</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/booking.js"></script>
+</body>
+</html>

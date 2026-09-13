@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Big Brother Hair & Beauty Salon</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👑</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body style="background:#090909;">
+
+  <!-- Simple Header -->
+  <header class="site-header scrolled">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">👑</div>
+        <div class="logo-text">
+          <span class="logo-title">BIG BROTHER ADMIN</span>
+          <span class="logo-subtitle">Paharganj Studio Operations</span>
+        </div>
+      </a>
+
+      <div class="nav-actions">
+        <a href="index.html" class="btn btn-outline-gold btn-sm">← View Public Website</a>
+        <a href="booking.html" class="btn btn-gold btn-sm">+ New Walk-in Booking</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Admin Dashboard Section -->
+  <main class="admin-section">
+    <div class="container">
+      <div class="admin-header">
+        <div>
+          <span class="badge badge-gold" style="margin-bottom:0.5rem;">Live Salon Operations</span>
+          <h1>Appointment Management</h1>
+        </div>
+        <div>
+          <button id="exportCsvBtn" class="btn btn-gold btn-sm">
+            📥 Export Bookings (CSV)
+          </button>
+        </div>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="admin-stats-grid">
+        <div class="admin-stat-card">
+          <div style="font-size:0.85rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.08em;">Total Bookings</div>
+          <div class="admin-stat-val" id="statTotalBookings">0</div>
+        </div>
+        <div class="admin-stat-card">
+          <div style="font-size:0.85rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.08em;">Today's Schedule</div>
+          <div class="admin-stat-val" id="statTodayBookings" style="color:#2ECC71;">0</div>
+        </div>
+        <div class="admin-stat-card">
+          <div style="font-size:0.85rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.08em;">Estimated Booked Revenue</div>
+          <div class="admin-stat-val" id="statEstimatedRevenue">₹0</div>
+        </div>
+        <div class="admin-stat-card">
+          <div style="font-size:0.85rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.08em;">Confirmed Slots</div>
+          <div class="admin-stat-val" id="statConfirmedCount" style="color:var(--gold-light);">0</div>
+        </div>
+      </div>
+
+      <!-- Filters & Search Bar -->
+      <div class="glass-card" style="padding:1.25rem 1.75rem; margin-bottom:2rem; display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+        <div style="flex-grow:1; min-width:260px;">
+          <input type="text" id="adminSearch" class="form-control" placeholder="Search by Client Name, Phone, Reference ID or Service..." style="padding:0.7rem 1rem;">
+        </div>
+        <div>
+          <select id="adminStatusFilter" class="form-control" style="padding:0.7rem 1rem; min-width:160px;">
+            <option value="all">All Statuses</option>
+            <option value="confirmed">Confirmed</option>
+            <option value="completed">Completed</option>
+            <option value="cancelled">Cancelled</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Appointments Table -->
+      <div class="admin-table-container">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Ref ID</th>
+              <th>Client Info</th>
+              <th>Service</th>
+              <th>Price</th>
+              <th>Date & Slot</th>
+              <th>Stylist</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="appointmentsTableBody">
+            <!-- Populated dynamically by admin.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>
