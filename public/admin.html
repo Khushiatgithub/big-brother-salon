@@ -3,100 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Dashboard | Big Brother Hair & Beauty Salon</title>
+  <title>Admin Operations Portal | Big Brother Hair & Beauty Salon</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👑</text></svg>">
   <link rel="stylesheet" href="/css/style.css">
 </head>
-<body style="background:#090909;">
+<body style="background:var(--bg-obsidian);">
 
-  <!-- Simple Header -->
-  <header class="site-header scrolled">
-    <div class="container nav-container">
-      <a href="index.html" class="brand-logo">
-        <div class="logo-icon">👑</div>
-        <div class="logo-text">
-          <span class="logo-title">BIG BROTHER ADMIN</span>
-          <span class="logo-subtitle">Paharganj Studio Operations</span>
+  <!-- Ambient Aurora Glow & Cursor Glow -->
+  <div class="aurora-container" aria-hidden="true">
+    <div class="aurora-orb aurora-orb-1"></div>
+    <div class="aurora-orb aurora-orb-2"></div>
+  </div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Admin Floating Island Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <div class="nav-island">
+        <a href="admin.html" class="brand-logo">
+          <div class="logo-icon">👑</div>
+          <div class="logo-text">
+            <span class="logo-title">BIG BROTHER ADMIN</span>
+            <span class="logo-subtitle">Paharganj Operations Portal</span>
+          </div>
+        </a>
+
+        <div style="display:flex; align-items:center; gap:0.6rem;">
+          <span class="status-badge status-confirmed" style="display:inline-flex; align-items:center; gap:0.4rem; padding:0.35rem 0.85rem; font-size:0.8rem;">
+            <span style="width:7px; height:7px; border-radius:50%; background:#2ECC71; box-shadow:0 0 8px #2ECC71; display:inline-block;"></span>
+            LIVE SYNCED
+          </span>
         </div>
-      </a>
 
-      <div class="nav-actions">
-        <a href="index.html" class="btn btn-outline-gold btn-sm">← View Public Website</a>
-        <a href="booking.html" class="btn btn-gold btn-sm">+ New Walk-in Booking</a>
+        <div class="nav-actions">
+          <div class="btn-magnetic">
+            <a href="index.html" class="btn btn-outline-gold btn-sm">← View Public Website</a>
+          </div>
+          <div class="btn-magnetic">
+            <a href="booking.html" class="btn btn-gold btn-sm">+ New Walk-in Booking</a>
+          </div>
+        </div>
       </div>
     </div>
   </header>
 
   <!-- Admin Dashboard Section -->
-  <main class="admin-section">
+  <main class="admin-section" style="padding-top: calc(var(--header-height) + 4rem); padding-bottom: 6rem;">
     <div class="container">
-      <div class="admin-header">
+      
+      <!-- Top Title & Export Action -->
+      <div class="admin-header" style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:2.5rem; flex-wrap:wrap; gap:1.5rem;">
         <div>
-          <span class="badge badge-gold" style="margin-bottom:0.5rem;">Live Salon Operations</span>
-          <h1>Appointment Management</h1>
+          <span class="badge badge-gold" style="margin-bottom:0.75rem;">Studio Control Center</span>
+          <h1 style="font-size:clamp(2rem, 3.5vw, 2.8rem); margin-bottom:0.5rem;">Appointment & Revenue Stream</h1>
+          <p style="color:var(--text-muted); font-size:0.95rem;">Monitor real-time guest bookings, assign stylists, export reports, and manage schedule statuses.</p>
         </div>
-        <div>
-          <button id="exportCsvBtn" class="btn btn-gold btn-sm">
-            📥 Export Bookings (CSV)
+        <div style="display:flex; gap:1rem; align-items:center;">
+          <div class="btn-magnetic">
+            <button id="exportCsvBtn" class="btn btn-gold btn-sm">
+              📥 Export Bookings (CSV)
+            </button>
+          </div>
+          <button class="btn btn-glass btn-sm" onclick="fetchDashboardData()" title="Refresh Dashboard">
+            🔄 Refresh
           </button>
         </div>
       </div>
 
-      <!-- Stats Grid -->
-      <div class="admin-stats-grid">
-        <div class="admin-stat-card">
-          <div style="font-size:0.85rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.08em;">Total Bookings</div>
-          <div class="admin-stat-val" id="statTotalBookings">0</div>
+      <!-- Live Stats Cards with Spotlight & Tilt -->
+      <div class="admin-stats-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1.5rem; margin-bottom:2.5rem;">
+        <div class="spotlight-card tilt-card" style="padding:1.75rem; border-radius:var(--radius-xl);">
+          <div style="font-size:0.82rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.12em; margin-bottom:0.5rem; font-weight:600;">Total Bookings</div>
+          <div class="admin-stat-val" id="statTotalBookings" style="font-family:var(--font-serif); font-size:2.8rem; font-weight:800; color:#FFF;">0</div>
+          <div style="font-size:0.8rem; color:var(--gold-champagne); margin-top:0.4rem;">Lifetime client reservations</div>
         </div>
-        <div class="admin-stat-card">
-          <div style="font-size:0.85rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.08em;">Today's Schedule</div>
-          <div class="admin-stat-val" id="statTodayBookings" style="color:#2ECC71;">0</div>
+
+        <div class="spotlight-card tilt-card" style="padding:1.75rem; border-radius:var(--radius-xl);">
+          <div style="font-size:0.82rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.12em; margin-bottom:0.5rem; font-weight:600;">Today's Schedule</div>
+          <div class="admin-stat-val" id="statTodayBookings" style="font-family:var(--font-serif); font-size:2.8rem; font-weight:800; color:#2ECC71;">0</div>
+          <div style="font-size:0.8rem; color:var(--text-secondary); margin-top:0.4rem;">Active appointments today</div>
         </div>
-        <div class="admin-stat-card">
-          <div style="font-size:0.85rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.08em;">Estimated Booked Revenue</div>
-          <div class="admin-stat-val" id="statEstimatedRevenue">₹0</div>
+
+        <div class="spotlight-card tilt-card" style="padding:1.75rem; border-radius:var(--radius-xl);">
+          <div style="font-size:0.82rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.12em; margin-bottom:0.5rem; font-weight:600;">Estimated Revenue</div>
+          <div class="admin-stat-val" id="statEstimatedRevenue" style="font-family:var(--font-serif); font-size:2.8rem; font-weight:800; color:var(--gold-champagne);">₹0</div>
+          <div style="font-size:0.8rem; color:var(--text-secondary); margin-top:0.4rem;">Booked service valuation</div>
         </div>
-        <div class="admin-stat-card">
-          <div style="font-size:0.85rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.08em;">Confirmed Slots</div>
-          <div class="admin-stat-val" id="statConfirmedCount" style="color:var(--gold-light);">0</div>
+
+        <div class="spotlight-card tilt-card" style="padding:1.75rem; border-radius:var(--radius-xl);">
+          <div style="font-size:0.82rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.12em; margin-bottom:0.5rem; font-weight:600;">Confirmed Slots</div>
+          <div class="admin-stat-val" id="statConfirmedCount" style="font-family:var(--font-serif); font-size:2.8rem; font-weight:800; color:#60A5FA;">0</div>
+          <div style="font-size:0.8rem; color:var(--text-secondary); margin-top:0.4rem;">Pending completion</div>
         </div>
       </div>
 
-      <!-- Filters & Search Bar -->
-      <div class="glass-card" style="padding:1.25rem 1.75rem; margin-bottom:2rem; display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
-        <div style="flex-grow:1; min-width:260px;">
-          <input type="text" id="adminSearch" class="form-control" placeholder="Search by Client Name, Phone, Reference ID or Service..." style="padding:0.7rem 1rem;">
+      <!-- Filters & Search Glass Bar -->
+      <div class="spotlight-card" style="padding:1.25rem 1.75rem; margin-bottom:2rem; display:flex; gap:1.25rem; align-items:center; flex-wrap:wrap; border-radius:var(--radius-lg);">
+        <div style="flex-grow:1; min-width:280px; position:relative;">
+          <input type="text" id="adminSearch" class="form-control" placeholder="🔍  Search by Client Name, Phone, Ref ID, or Service..." style="padding:0.8rem 1.25rem; font-size:0.95rem;">
         </div>
         <div>
-          <select id="adminStatusFilter" class="form-control" style="padding:0.7rem 1rem; min-width:160px;">
+          <select id="adminStatusFilter" class="form-control" style="padding:0.8rem 1.25rem; min-width:180px; font-size:0.95rem;">
             <option value="all">All Statuses</option>
-            <option value="confirmed">Confirmed</option>
-            <option value="completed">Completed</option>
-            <option value="cancelled">Cancelled</option>
+            <option value="confirmed">Confirmed Only</option>
+            <option value="completed">Completed Only</option>
+            <option value="cancelled">Cancelled Only</option>
           </select>
         </div>
       </div>
 
-      <!-- Appointments Table -->
-      <div class="admin-table-container">
-        <table class="admin-table">
-          <thead>
-            <tr>
-              <th>Ref ID</th>
-              <th>Client Info</th>
-              <th>Service</th>
-              <th>Price</th>
-              <th>Date & Slot</th>
-              <th>Stylist</th>
-              <th>Status</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody id="appointmentsTableBody">
-            <!-- Populated dynamically by admin.js -->
-          </tbody>
-        </table>
+      <!-- Appointments Table with Luxury Glass Enclosure -->
+      <div class="spotlight-card" style="border-radius:var(--radius-xl); overflow:hidden; padding:0; border:1px solid var(--border-glass);">
+        <div class="admin-table-container" style="overflow-x:auto;">
+          <table class="admin-table" style="width:100%; border-collapse:collapse; text-align:left;">
+            <thead>
+              <tr style="background:rgba(255,255,255,0.03); border-bottom:1px solid var(--border-glass);">
+                <th style="padding:1.1rem 1.25rem; color:var(--gold-champagne); font-size:0.82rem; text-transform:uppercase; letter-spacing:0.1em; font-weight:700;">Ref ID</th>
+                <th style="padding:1.1rem 1.25rem; color:var(--gold-champagne); font-size:0.82rem; text-transform:uppercase; letter-spacing:0.1em; font-weight:700;">Client Info</th>
+                <th style="padding:1.1rem 1.25rem; color:var(--gold-champagne); font-size:0.82rem; text-transform:uppercase; letter-spacing:0.1em; font-weight:700;">Service</th>
+                <th style="padding:1.1rem 1.25rem; color:var(--gold-champagne); font-size:0.82rem; text-transform:uppercase; letter-spacing:0.1em; font-weight:700;">Price</th>
+                <th style="padding:1.1rem 1.25rem; color:var(--gold-champagne); font-size:0.82rem; text-transform:uppercase; letter-spacing:0.1em; font-weight:700;">Date & Slot</th>
+                <th style="padding:1.1rem 1.25rem; color:var(--gold-champagne); font-size:0.82rem; text-transform:uppercase; letter-spacing:0.1em; font-weight:700;">Stylist</th>
+                <th style="padding:1.1rem 1.25rem; color:var(--gold-champagne); font-size:0.82rem; text-transform:uppercase; letter-spacing:0.1em; font-weight:700;">Status</th>
+                <th style="padding:1.1rem 1.25rem; color:var(--gold-champagne); font-size:0.82rem; text-transform:uppercase; letter-spacing:0.1em; font-weight:700; text-align:center;">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="appointmentsTableBody">
+              <!-- Populated dynamically by admin.js -->
+            </tbody>
+          </table>
+        </div>
       </div>
+
     </div>
   </main>
 
