@@ -23,14 +23,39 @@ if (!fs.existsSync(DATA_DIR)) {
   fs.mkdirSync(DATA_DIR, { recursive: true });
 }
 
+// In-memory state cache for serverless environments (Vercel)
+let inMemoryAppointments = null;
+let inMemoryInquiries = null;
+let inMemorySubscribers = null;
+
 function readJSON(filePath, defaultVal = []) {
   try {
+    if (filePath.includes('appointments.json') && inMemoryAppointments !== null) {
+      return inMemoryAppointments;
+    }
+    if (filePath.includes('inquiries.json') && inMemoryInquiries !== null) {
+      return inMemoryInquiries;
+    }
+    if (filePath.includes('subscribers.json') && inMemorySubscribers !== null) {
+      return inMemorySubscribers;
+    }
+
     if (!fs.existsSync(filePath)) {
-      fs.writeFileSync(filePath, JSON.stringify(defaultVal, null, 2));
+      try {
+        fs.writeFileSync(filePath, JSON.stringify(defaultVal, null, 2));
+      } catch (e) {
+        // Read-only filesystem in serverless
+      }
       return defaultVal;
     }
     const raw = fs.readFileSync(filePath, 'utf8');
-    return JSON.parse(raw);
+    const parsed = JSON.parse(raw);
+    
+    if (filePath.includes('appointments.json')) inMemoryAppointments = parsed;
+    if (filePath.includes('inquiries.json')) inMemoryInquiries = parsed;
+    if (filePath.includes('subscribers.json')) inMemorySubscribers = parsed;
+
+    return parsed;
   } catch (err) {
     console.error(`Error reading ${filePath}:`, err);
     return defaultVal;
@@ -39,13 +64,19 @@ function readJSON(filePath, defaultVal = []) {
 
 function writeJSON(filePath, data) {
   try {
+    if (filePath.includes('appointments.json')) inMemoryAppointments = data;
+    if (filePath.includes('inquiries.json')) inMemoryInquiries = data;
+    if (filePath.includes('subscribers.json')) inMemorySubscribers = data;
+
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
     return true;
   } catch (err) {
-    console.error(`Error writing ${filePath}:`, err);
-    return false;
+    // In serverless, filesystem is read-only; in-memory cache preserves data during execution
+    console.warn(`Filesystem write notice for ${filePath} (cached in memory):`, err.message);
+    return true;
   }
 }
+
 
 // Service Catalog Data
 const SERVICES = [
