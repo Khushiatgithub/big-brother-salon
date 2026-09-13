@@ -1,0 +1,62 @@
+[
+  {
+    "id": "BB-2026-7227",
+    "createdAt": "2026-09-13T14:32:58.410Z",
+    "name": "Aanya Mehra",
+    "phone": "+91 98123 45678",
+    "email": "aanya@example.com",
+    "serviceId": "hair-balayage",
+    "serviceName": "French Balayage & Glossing Treatment",
+    "servicePrice": 4999,
+    "stylist": "Vikram Singh (Senior Hair Artist)",
+    "date": "2026-09-18",
+    "timeSlot": "02:45 PM",
+    "notes": "Looking forward to my appointment",
+    "status": "confirmed"
+  },
+  {
+    "id": "BB-2026-1048",
+    "createdAt": "2026-09-13T10:15:00.000Z",
+    "name": "Priyanka Sharma",
+    "phone": "+91 98112 34567",
+    "email": "priyanka.s@gmail.com",
+    "serviceCategory": "bridal",
+    "serviceName": "Royal Mughal Bridal Makeover & Hair Styling",
+    "servicePrice": 14999,
+    "stylist": "Meera Verma (Master Bridal Stylist)",
+    "date": "2026-09-16",
+    "timeSlot": "11:00 AM",
+    "notes": "Wedding reception makeover, HD airbrush makeup required.",
+    "status": "confirmed"
+  },
+  {
+    "id": "BB-2026-1049",
+    "createdAt": "2026-09-13T14:30:00.000Z",
+    "name": "Arjun Malhotra",
+    "phone": "+91 98734 56789",
+    "email": "arjun.m@outlook.com",
+    "serviceCategory": "hair",
+    "serviceName": "Signature Fade Haircut + Beard Spa Sculpting",
+    "servicePrice": 1299,
+    "stylist": "Vikram Singh (Senior Hair Artist)",
+    "date": "2026-09-14",
+    "timeSlot": "04:30 PM",
+    "notes": "Classic skin fade with warm towel eucalyptus steam.",
+    "status": "confirmed"
+  },
+  {
+    "id": "BB-2026-1050",
+    "createdAt": "2026-09-13T16:00:00.000Z",
+    "name": "Sneha Kapoor",
+    "phone": "+91 99580 12345",
+    "email": "sneha.kapoor@yahoo.com",
+    "serviceCategory": "treatments",
+    "serviceName": "Olaplex Bond Rebuilding & French Balayage",
+    "servicePrice": 5999,
+    "stylist": "Vikram Singh (Senior Hair Artist)",
+    "date": "2026-09-15",
+    "timeSlot": "02:00 PM",
+    "notes": "Ash blonde tones with caramel lowlights.",
+    "status": "confirmed"
+  }
+]

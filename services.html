@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services & Pricing | Big Brother Hair & Beauty Salon Paharganj</title>
+  <meta name="description" content="Explore our full menu of luxury salon services: Haircuts, Balayage Hair Color, Brazilian Keratin Smoothening, Clinical HydraFacial, Painless Waxing, and Royal Bridal Makeup in Paharganj, New Delhi.">
+  
+  <meta property="og:title" content="Services & Pricing Menu | Big Brother Salon">
+  <meta property="og:description" content="Bespoke haircare, luxury aesthetic facials, and couture bridal makeup in Central Delhi. Transparent pricing with master stylists.">
+  <meta property="og:image" content="images/hero_salon.jpg">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">B</div>
+        <div class="logo-text">
+          <span class="logo-title">BIG BROTHER</span>
+          <span class="logo-subtitle">Hair & Beauty Studio</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav CTAs -->
+      <div class="nav-actions">
+        <a href="tel:+919876543210" class="nav-phone-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span>+91 98765 43210</span>
+        </a>
+        <a href="booking.html" class="btn btn-gold btn-sm">Book Appointment</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div>
+      <div class="mobile-drawer-header">
+        <div class="brand-logo">
+          <div class="logo-icon">B</div>
+          <div class="logo-text">
+            <span class="logo-title">BIG BROTHER</span>
+            <span class="logo-subtitle">Paharganj, New Delhi</span>
+          </div>
+        </div>
+        <button class="close-drawer-btn" id="closeDrawerBtn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Salon</a></li>
+        <li><a href="services.html" class="active">Services & Pricing</a></li>
+        <li><a href="gallery.html">Transformation Gallery</a></li>
+        <li><a href="booking.html">Book Appointment</a></li>
+        <li><a href="contact.html">Contact & Location</a></li>
+        <li><a href="admin.html" style="font-size:0.95rem; color:var(--gold-light);">👑 Admin Portal</a></li>
+      </ul>
+    </div>
+    <div>
+      <a href="booking.html" class="btn btn-gold btn-block" style="margin-bottom:1rem;">Book Appointment</a>
+      <a href="tel:+919876543210" class="btn btn-glass btn-block">📞 Call Studio</a>
+    </div>
+  </aside>
+
+  <!-- Services Hero Banner -->
+  <section class="about-hero" style="padding-bottom:2.5rem;">
+    <div class="container" style="text-align:center;">
+      <span class="badge badge-gold" style="margin-bottom:1rem;">Haute Coiffure & Aesthetic Spa</span>
+      <h1 style="margin-bottom:1.25rem;">Our Luxury <span class="text-gold">Service Menu</span></h1>
+      <p style="max-width:700px; margin:0 auto 2.5rem; font-size:1.05rem;">
+        Indulge in personalized salon treatments performed using authentic international formulations and tailored to your individuality.
+      </p>
+
+      <!-- Category Filter Tabs -->
+      <div class="services-filter">
+        <button class="filter-btn active" data-cat="all">All Rituals</button>
+        <button class="filter-btn" data-cat="hair">Hair Styling</button>
+        <button class="filter-btn" data-cat="color">Hair Color & Balayage</button>
+        <button class="filter-btn" data-cat="treatments">Keratin & Smoothening</button>
+        <button class="filter-btn" data-cat="facials">Facials & HydraFacial</button>
+        <button class="filter-btn" data-cat="waxing">Painless Waxing</button>
+        <button class="filter-btn" data-cat="bridal">Bridal & Party Glam</button>
+        <button class="filter-btn" data-cat="nails">Nail Spa</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid Section -->
+  <section class="services-section" style="padding-top:1rem;">
+    <div class="container">
+      <div class="services-grid" id="serviceCardsContainer">
+
+        <!-- Card 1: Haircut Women -->
+        <article class="service-card" data-category="hair">
+          <div class="service-card-img">
+            <img src="images/hair_balayage.jpg" alt="Couture Haircut and Styling">
+            <span class="badge badge-gold service-badge">Essential</span>
+          </div>
+          <div class="service-card-body">
+            <div class="service-meta">
+              <span class="service-duration">⏱ 45 mins</span>
+              <span class="service-price">₹999</span>
+            </div>
+            <h3 class="service-card-title">Couture Haircut & Scalp Spa</h3>
+            <p class="service-card-desc">Personalized hair texture consultation, deep scalp massage wash with Kérastase Bain, precision cut, and Dyson Supersonic blowout.</p>
+            <div class="service-card-footer">
+              <span style="font-size:0.85rem; color:var(--text-muted);">Includes Wash & Blowdry</span>
+              <a href="booking.html?service=hair-cut-style" class="btn btn-sm btn-outline-gold">Book Service</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Men's Fade & Beard -->
+        <article class="service-card" data-category="hair">
+          <div class="service-card-img">
+            <img src="images/mens_grooming.jpg" alt="Signature Fade & Beard Spa">
+            <span class="badge badge-gold service-badge">Men's Top Pick</span>
+          </div>
+          <div class="service-card-body">
+            <div class="service-meta">
+              <span class="service-duration">⏱ 40 mins</span>
+              <span class="service-price">₹1,299</span>
+            </div>
+            <h3 class="service-card-title">Signature Fade + Beard Spa</h3>
+            <p class="service-card-desc">Skin fade clipper artistry, razor line sharpening, warm eucalyptus steam towel therapy, and organic argan beard oil styling.</p>
+            <div class="service-card-footer">
+              <span style="font-size:0.85rem; color:var(--text-muted);">Hot Towel Treatment</span>
+              <a href="booking.html?service=hair-fade-beard" class="btn btn-sm btn-outline-gold">Book Service</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: French Balayage -->
+        <article class="service-card" data-category="color">
+          <div class="service-card-img">
+            <img src="images/hair_balayage.jpg" alt="French Balayage & Glossing">
+            <span class="badge badge-gold service-badge">Trending</span>
+          </div>
+          <div class="service-card-body">
+            <div class="service-meta">
+              <span class="service-duration">⏱ 150 mins</span>
+              <span class="service-price">₹4,999</span>
+            </div>
+            <h3 class="service-card-title">French Balayage & Glossing</h3>
+            <p class="service-card-desc">Hand-painted multi-tonal dimensional color using ammonia-free L'Oréal INOA pigments, bond reconstructor, and French Dia Light gloss.</p>
+            <div class="service-card-footer">
+              <span style="font-size:0.85rem; color:var(--text-muted);">Zero Bleach Damage</span>
+              <a href="booking.html?service=hair-balayage" class="btn btn-sm btn-gold">Book Service</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4: Global Color -->
+        <article class="service-card" data-category="color">
+          <div class="service-card-img">
+            <img src="images/hero_salon.jpg" alt="Global Hair Color">
+          </div>
+          <div class="service-card-body">
+            <div class="service-meta">
+              <span class="service-duration">⏱ 90 mins</span>
+              <span class="service-price">₹3,499</span>
+            </div>
+            <h3 class="service-card-title">Global Hair Color + Keratin Infusion</h3>
+            <p class="service-card-desc">Flawless root-to-tip vibrant color saturation with 100% grey coverage and nourishing micro-keratin sealant for prolonged luster.</p>
+            <div class="service-card-footer">
+              <span style="font-size:0.85rem; color:var(--text-muted);">L'Oréal INOA Formula</span>
+              <a href="booking.html?service=hair-global-color" class="btn btn-sm btn-outline-gold">Book Service</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5: Keratin Smoothing -->
+        <article class="service-card" data-category="treatments">
+          <div class="service-card-img">
+            <img src="images/after_hair.jpg" alt="Brazilian Keratin Smoothing">
+            <span class="badge badge-gold service-badge">Bestseller</span>
+          </div>
+          <div class="service-card-body">
+            <div class="service-meta">
+              <span class="service-duration">⏱ 180 mins</span>
+              <span class="service-price">₹4,999</span>
+            </div>
+            <h3 class="service-card-title">Brazilian Keratin Smoothening</h3>
+            <p class="service-card-desc">Formaldehyde-free intensive smoothing treatment that eliminates 95% frizz and curl, leaving high-shine glass hair for 4-6 months.</p>
+            <div class="service-card-footer">
+              <span style="font-size:0.85rem; color:var(--text-muted);">4-6 Months Longevity</span>
+              <a href="booking.html?service=keratin-smoothing" class="btn btn-sm btn-gold">Book Service</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6: Hair Botox & Olaplex -->
+        <article class="service-card" data-category="treatments">
+          <div class="service-card-img">
+            <img src="images/before_hair.jpg" alt="Hair Botox Reconstruct">
+          </div>
+          <div class="service-card-body">
+            <div class="service-meta">
+              <span class="service-duration">⏱ 90 mins</span>
+              <span class="service-price">₹3,999</span>
+            </div>
+            <h3 class="service-card-title">Deep Botox Hair Reconstruct</h3>
+            <p class="service-card-desc">Deep protein, collagen, and Olaplex No. 1 & 2 molecular reconstructive therapy for chemically compromised, dull, or porous hair.</p>
+            <div class="service-card-footer">
+              <span style="font-size:0.85rem; color:var(--text-muted);">Olaplex No. 1 & 2 Included</span>
+              <a href="booking.html?service=hair-botox" class="btn btn-sm btn-outline-gold">Book Service</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 7: Clinical HydraFacial -->
+        <article class="service-card" data-category="facials">
+          <div class="service-card-img">
+            <img src="images/hydrafacial.jpg" alt="Clinical HydraFacial MD">
+            <span class="badge badge-gold service-badge">Dermatology Grade</span>
+          </div>
+          <div class="service-card-body">
+            <div class="service-meta">
+              <span class="service-duration">⏱ 60 mins</span>
+              <span class="service-price">₹2,999</span>
+            </div>
+            <h3 class="service-card-title">7-Step Clinical HydraFacial MD</h3>
+            <p class="service-card-desc">Hydro-dermabrasion pore vacuum, chemical peel exfoliation, hyaluronic serum infusion, cryo-sculpting, and 24K Gold LED therapy.</p>
+            <div class="service-card-footer">
+              <span style="font-size:0.85rem; color:var(--text-muted);">Instant Glass Glow</span>
+              <a href="booking.html?service=hydra-facial" class="btn btn-sm btn-gold">Book Service</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 8: 24K Gold Facial -->
+        <article class="service-card" data-category="facials">
+          <div class="service-card-img">
+            <img src="images/bridal_glam.jpg" alt="24K Gold Facial">
+          </div>
+          <div class="service-card-body">
+            <div class="service-meta">
+              <span class="service-duration">⏱ 75 mins</span>
+              <span class="service-price">₹3,499</span>
+            </div>
+            <h3 class="service-card-title">24K Imperial Gold Radiance Facial</h3>
+            <p class="service-card-desc">Pure 24-karat gold leaf sheet application, lymphatic drainage massage, anti-pigmentation botanical extracts, and algae peel-off mask.</p>
+            <div class="service-card-footer">
+              <span style="font-size:0.85rem; color:var(--text-muted);">Bridal Prep Favorite</span>
+              <a href="booking.html?service=gold-bridal-facial" class="btn btn-sm btn-outline-gold">Book Service</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 9: Painless Waxing -->
+        <article class="service-card" data-category="waxing">
+          <div class="service-card-img">
+            <img src="images/hydrafacial.jpg" alt="Full Body Rica Waxing">
+          </div>
+          <div class="service-card-body">
+            <div class="service-meta">
+              <span class="service-duration">⏱ 90 mins</span>
+              <span class="service-price">₹2,499</span>
+            </div>
+            <h3 class="service-card-title">Full Body Rica Brazilian Waxing Spa</h3>
+            <p class="service-card-desc">Imported Italian liposoluble colophony-free wax formulated for ultra-sensitive skin. Zero irritation, zero bumps, leaves silky velvet skin.</p>
+            <div class="service-card-footer">
+              <span style="font-size:0.85rem; color:var(--text-muted);">100% Painless Protocol</span>
+              <a href="booking.html?service=painless-waxing" class="btn btn-sm btn-outline-gold">Book Service</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 10: Royal Bridal Makeover -->
+        <article class="service-card" data-category="bridal">
+          <div class="service-card-img">
+            <img src="images/bridal_glam.jpg" alt="Royal Bridal Makeover">
+            <span class="badge badge-gold service-badge">Couture Package</span>
+          </div>
+          <div class="service-card-body">
+            <div class="service-meta">
+              <span class="service-duration">⏱ 210 mins</span>
+              <span class="service-price">₹14,999</span>
+            </div>
+            <h3 class="service-card-title">Royal Mughal Bridal Makeover</h3>
+            <p class="service-card-desc">HD Airbrush makeup, MAC Pro base, false mink lashes, royal floral hair updo, jewelry setting, dupatta draping, and VIP suite service.</p>
+            <div class="service-card-footer">
+              <span style="font-size:0.85rem; color:var(--text-muted);">VIP Private Suite</span>
+              <a href="booking.html?service=royal-bridal-makeup" class="btn btn-sm btn-gold">Book Service</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 11: Party Glam Makeover -->
+        <article class="service-card" data-category="bridal">
+          <div class="service-card-img">
+            <img src="images/hair_balayage.jpg" alt="Party Glam Makeover">
+          </div>
+          <div class="service-card-body">
+            <div class="service-meta">
+              <span class="service-duration">⏱ 90 mins</span>
+              <span class="service-price">₹4,999</span>
+            </div>
+            <h3 class="service-card-title">Red Carpet Party Glam & Waves</h3>
+            <p class="service-card-desc">Luminous dewy skin base, customized smokey or halo eye artistry, Hollywood volume waves or romantic textured hair styling.</p>
+            <div class="service-card-footer">
+              <span style="font-size:0.85rem; color:var(--text-muted);">Cocktails & Receptions</span>
+              <a href="booking.html?service=party-glam-makeup" class="btn btn-sm btn-outline-gold">Book Service</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 12: Nail Extensions -->
+        <article class="service-card" data-category="nails">
+          <div class="service-card-img">
+            <img src="images/nail_art.jpg" alt="Gel Nail Extensions">
+            <span class="badge badge-gold service-badge">Spa Special</span>
+          </div>
+          <div class="service-card-body">
+            <div class="service-meta">
+              <span class="service-duration">⏱ 75 mins</span>
+              <span class="service-price">₹1,999</span>
+            </div>
+            <h3 class="service-card-title">Gel Extensions & Chrome Art</h3>
+            <p class="service-card-desc">Russian e-file dry manicure, clear or nude hard gel extensions, high-gloss gel polish, and 24K gold chrome leaf embellishments.</p>
+            <div class="service-card-footer">
+              <span style="font-size:0.85rem; color:var(--text-muted);">Chip-Resistant 4+ Weeks</span>
+              <a href="booking.html?service=nail-extensions" class="btn btn-sm btn-outline-gold">Book Service</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp Widget -->
+  <aside class="whatsapp-widget" aria-label="WhatsApp Concierge">
+    <div class="wa-tooltip">💬 Inquire via WhatsApp</div>
+    <a href="https://wa.me/919876543210?text=Hi%20Big%20Brother%20Salon!%20I%20would%20like%20to%20inquire%20about%20your%20services%20menu." target="_blank" rel="noopener noreferrer" class="wa-btn" aria-label="Open WhatsApp Chat">
+      <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.82 14.18c-.24.68-1.4 1.25-1.92 1.32-.49.07-1.12.1-3.26-.79-2.74-1.14-4.5-3.92-4.63-4.1-.14-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 1-2.25.24-.25.53-.31.7-.31.18 0 .35 0 .5.01.16.01.38-.06.59.45.22.53.76 1.86.83 2 .07.14.11.31.02.49-.09.18-.14.29-.28.45-.14.16-.3.35-.43.47-.14.14-.29.29-.12.58.16.29.73 1.21 1.57 1.96 1.08.96 1.99 1.26 2.27 1.4.29.14.45.12.62-.07.16-.18.7-82.89-1.1.18-.28.37-.24.62-.14.25.1.58.74 1.85 1.37 1.95.22.09.43.14.63.14.31 0 .61-.08.79-.34.23-.33.24-.8.15-1.04z"/></svg>
+    </a>
+  </aside>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="logo-icon">B</div>
+            <div class="logo-text">
+              <span class="logo-title">BIG BROTHER</span>
+              <span class="logo-subtitle">Paharganj, New Delhi</span>
+            </div>
+          </div>
+          <p>
+            Paharganj's benchmark for elite hair styling, bespoke coloring, advanced HydraFacials, and opulent bridal makeovers.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Our Story</a></li>
+            <li><a href="services.html">Services & Pricing</a></li>
+            <li><a href="gallery.html">Transformation Gallery</a></li>
+            <li><a href="booking.html">Book Appointment</a></li>
+            <li><a href="contact.html">Studio Directions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Signature Rituals</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">French Balayage</a></li>
+            <li><a href="services.html">Keratin Smoothening</a></li>
+            <li><a href="services.html">Clinical HydraFacial</a></li>
+            <li><a href="services.html">Royal Mughal Bridal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Paharganj Studio</h4>
+          <p style="font-size:0.88rem; color:var(--text-muted);">
+            Main Bazaar Road, Near NDLS, Paharganj, New Delhi - 110055<br>
+            📞 +91 98765 43210<br>
+            ⏰ Open Daily: 10:00 AM - 9:00 PM
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Big Brother Hair & Beauty Salon. All Rights Reserved.</div>
+        <div><a href="admin.html" style="color:var(--gold-light);">👑 Admin Portal</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // In-page category filter
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const cat = btn.getAttribute('data-cat');
+        document.querySelectorAll('#serviceCardsContainer .service-card').forEach(card => {
+          if (cat === 'all' || card.getAttribute('data-category') === cat) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

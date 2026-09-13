@@ -1,0 +1,25 @@
+{
+  "name": "big-brother-salon",
+  "version": "1.0.0",
+  "description": "Premium Luxury Website & Appointment Engine for Big Brother Hair & Beauty Salon, Paharganj, New Delhi",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "salon",
+    "beauty-salon",
+    "hair-salon",
+    "paharganj",
+    "delhi",
+    "appointment-booking",
+    "luxury-salon"
+  ],
+  "author": "Big Brother Salon",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
